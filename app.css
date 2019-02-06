@@ -185,10 +185,11 @@ img {
   margin: var(--horizontal-center-margins);
   grid-area: main-txt;
   background-color: var(--main-txt-bg-color);
-  z-index: 1;
+  z-index: 10;
   display: var(--main-txt-display);
   grid-template-areas: var(--main-txt-grid-areas);
-  grid-template-rows: var(--main-txt-row-spacing); }
+  grid-template-rows: var(--main-txt-row-spacing);
+  position: relative; }
 
 /* Title of the researcher's collection of work */
 .main-title {
@@ -228,7 +229,9 @@ img {
       -ms-flex-align: var(--center-position);
           align-items: var(--center-position);
   grid-area: matrix;
-  overflow: var(--matrix-overflow); }
+  overflow: var(--matrix-overflow);
+  position: relative;
+  z-index: 1; }
 
 /* Individual cell in the matrix */
 .matrix-item {
@@ -415,11 +418,12 @@ img {
   -ms-flex-item-align: var(--imm-sch-url-vertical-align);
       align-self: var(--imm-sch-url-vertical-align);
   background-color: var(--imm-sch-url-bg-color);
-  z-index: 1;
+  z-index: 10;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   height: var(--imm-sch-cont-height);
-  padding-top: var(--imm-sch-cont-padding-top); }
+  padding-top: var(--imm-sch-cont-padding-top);
+  position: relative; }
 
 /* Immersive Scholar logo */
 #logo {
@@ -948,6 +952,8 @@ img {
     --logo-padding: 50px var(--matrix-left-right-gap) 0 var(--matrix-left-right-gap);
     --imm-sch-url-padding: 5px var(--matrix-left-right-gap) 25px var(--matrix-left-right-gap);
     --main-url-separate-display: none; }
+  .main-txt {
+    background-color: rgba(0, 0, 0, 0); }
   .matrix {
     width: 100vw;
     overflow: visible;
