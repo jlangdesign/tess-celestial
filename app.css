@@ -137,7 +137,13 @@ body {
   grid-template-rows: var(--main-cont-row-heights);
   -webkit-box-pack: center;
       -ms-flex-pack: center;
-          justify-content: center; }
+          justify-content: center;
+  overflow: visible; }
+
+/* Clips the main-container when zoomed in and popup is displayed */
+.main-container.clipped {
+  overflow: hidden;
+  height: auto; }
 
 /* Main (collection) title, researcher name, and project titles */
 h1, h2, h3 {
