@@ -255,9 +255,9 @@ img {
 /* Matrix items grow slightly when hovered on */
 .matrix-item:hover {
   cursor: pointer;
+  z-index: 100;
   -webkit-transition: 1s;
   transition: 1s;
-  z-index: 100;
   -webkit-transform: scale(1.25);
           transform: scale(1.25); }
 
@@ -427,6 +427,8 @@ img {
 
 /* Hover state for secondary-img */
 .secondary-img:hover {
+  -webkit-transition: .25s;
+  transition: .25s;
   -webkit-transform: scale(1.25);
           transform: scale(1.25); }
 
@@ -557,8 +559,8 @@ img {
       "link link";
     --left-col-width: 100vw;
     --right-col-width: 0vw;
-    --top-row-height: 65vh;
-    --middle-row-height: 25vh;
+    --top-row-height: 60vh;
+    --middle-row-height: 30vh;
     --bottom-row-height: 10vh;
     --main-cont-row-heights: var(--top-row-height) var(--middle-row-height) var(--bottom-row-height);
     /* .main-txt properties */
@@ -571,15 +573,16 @@ img {
     --main-txt-heading-margin: 0px 0px 25px 0px;
     --main-title-size: 144px;
     --main-researcher-name-size: 84px;
+    --main-desc-size: 42px;
     --main-txt-padding: 75px calc(.5 * 100vw - 1125px);
     --main-desc-padding-left: 75px;
     --main-desc-margin: 0px;
     /* .matrix properties */
     --matrix-width: 100%;
-    --matrix-item-side-length: 85%;
+    --matrix-item-side-length: 80%;
     /* .popup properties - overall */
     --popup-width: 95%;
-    --popup-height: 60vh;
+    --popup-height: 50vh;
     /* .popup properties - text */
     --popup-heading-margin: 0px;
     --popup-title-size: 108px;
@@ -601,11 +604,10 @@ img {
 @media (max-aspect-ratio: 8 / 7) and (min-height: 2100px) {
   :root {
     /* body and .main-container properties */
-    --top-row-height: 60vh;
-    --middle-row-height: 30vh;
-    --bottom-row-height: 10vh;
     /* .main-txt properties */
     --main-txt-padding: 75px;
+    --main-title-size: 132px;
+    --main-researcher-name-size: 78px;
     /* .matrix properties */
     /* .popup properties */
     --popup-height: 55vh;
@@ -613,14 +615,14 @@ img {
     --logo-padding: 0 0 0 75px; } }
 
 /* For a wider "portrait" layout */
-/* (Aspect ratios between 6/7 and 1/1) */
+/* (Aspect ratios between 5/7 and 1/1) */
 @media (max-aspect-ratio: 1 / 1) and (min-height: 2100px) {
   :root {
     /* body and .main-container properties */
     --horizontal-center-margins: 0;
     /* .main-txt properties */
     --max-main-line-length: 800px;
-    --main-title-size: 124px;
+    --main-title-size: 120px;
     --main-researcher-name-size: 72px;
     --main-desc-size: 36px;
     --main-link-size: 24px;
@@ -664,7 +666,6 @@ img {
     --logo-display: inline-block;
     --max-logo-height: 80px; } }
 
-/* (Aspect ratios between 5/7 and 6/7) */
 /* For an even narrower "portrait" layout */
 /* (Aspect ratios between 11/21 and 5/7) */
 @media (max-aspect-ratio: 5 / 7) and (min-height: 2100px) {
@@ -690,10 +691,17 @@ img {
     --matrix-col-spacing: 1fr 1fr 1fr;
     --matrix-row-spacing: 1fr 1fr 1fr 1fr 1fr 1fr;
     /* .popup properties */
-    --popup-flex-flow: row nowrap;
+    --popup-flex-flow: column nowrap;
+    --popup-height: 70vh;
     /* .popup properties - text */
+    --popup-txt-inner-padding: 0 75px 75px 75px;
+    --popup-txt-area-width: 100%;
+    --popup-txt-area-height: 55%;
     --popup-title-size: 78px;
     --popup-story-size: 30px;
+    /* .popup properties - image */
+    --popup-img-area-width: 100%;
+    --popup-img-area-height: 45%;
     /* .imm-sch-url-container properties */
     --imm-sch-cont-height: 5vh;
     --imm-sch-cont-padding-top: 1.25vh;
@@ -715,8 +723,8 @@ img {
     --left-col-width: 100vw;
     --right-col-width: 0vw;
     --top-row-height: 70vh;
-    --middle-row-height: 25vh;
-    --bottom-row-height: 5vh;
+    --middle-row-height: 22.5vh;
+    --bottom-row-height: 7.5vh;
     /* .main-txt properties */
     --main-txt-display: block;
     --main-txt-grid-areas: "";
@@ -725,16 +733,14 @@ img {
     /* .matrix properties */
     --matrix-item-side-length: 45%;
     /* .popup properties - overall */
-    --popup-flex-flow: column nowrap;
     --popup-width: 90%;
-    --popup-height: 60vh;
+    --popup-height: 65vh;
     --popup-max-width: 1300px;
     --popup-left-position: 50%;
-    --popup-top-position: 32.5%;
+    --popup-top-position: 35%;
     /* .popup properties - text */
-    --popup-txt-inner-padding: 0 75px 75px 75px;
     --popup-heading-margin: 0px;
-    --popup-title-size: 78px;
+    --popup-title-size: 72px;
     --popup-story-size: 30px;
     --popup-txt-area-width: 100%;
     --popup-txt-area-height: 50%;
@@ -743,6 +749,7 @@ img {
     --popup-secondary-img-flex-flow: row nowrap;
     --popup-img-area-width: 100%;
     --popup-img-area-height: 50%;
+    --popup-img-primary-secondary-gap: 5% 0 0 0;
     --popup-primary-img-max-width: 100%;
     --popup-primary-img-max-height: 75%;
     --popup-secondary-img-slides-width: 100%;
