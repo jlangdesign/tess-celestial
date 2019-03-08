@@ -116,6 +116,9 @@
   --max-logo-height: 110px;
   --logo-padding: 0 0 0 2.083vw; }
 
+html {
+  scroll-behavior: smooth; }
+
 /* Element containing .main-container */
 body {
   margin: 0;
@@ -264,6 +267,22 @@ img {
 /**********************************************************************/
 /******************** Popup ********************/
 /**********************************************************************/
+/* Wrapper div that enables popup scrolling on a fixed BG */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  width: 100vw;
+  height: 100vh;
+  visibility: hidden; }
+
+/* Class to make overlay visible only in popup mode */
+.overlay.visible {
+  visibility: visible;
+  z-index: 100; }
+
 /* Container for matrix item title, story, images, and URL */
 .matrix-popup {
   z-index: 100;
@@ -301,7 +320,8 @@ img {
   -webkit-transition-duration: 0.6s;
           transition-duration: 0.6s;
   -webkit-transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
-          transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95); }
+          transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  margin-bottom: 25px; }
 
 /* Class to fade matrix-popup in/out */
 .matrix-popup.visible {
