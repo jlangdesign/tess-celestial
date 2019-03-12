@@ -1078,3 +1078,101 @@ img {
     /* .matrix properties */
     /* .popup properties */
     /* .imm-sch-url-container properties */ } }
+
+/*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
+/*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
+/*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
+/*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
+/*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
+/*||||||||||||  Visualization Wall display (special case)!  ||||||||||||*/
+/*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
+/*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
+/*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
+/*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
+/*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
+@media (width: 3840px) and (height: 1518px) {
+  :root {
+    /* body and .main-container properties */
+    --main-container-display: block;
+    --left-col-width: 100vw;
+    /* .main-txt properties */
+    --main-txt-padding: 445px 32px 0 32px;
+    --main-title-size: 58px;
+    --main-researcher-name-size: 36px;
+    --main-link-size: 12px;
+    /* .matrix properties */
+    --matrix-item-max-side-length: 400px;
+    /* .popup properties - overall */
+    --popup-width: 2021.5px;
+    --popup-transform: translateY(0%) translateX(50%);
+    --popup-border-radius: 0px;
+    --popup-button-display: none;
+    /* .popup properties - text */
+    --popup-txt-inner-padding: 0px;
+    --popup-title-size: 42px;
+    --popup-txt-area-width: calc(406px - 64px);
+    --popup-txt-area-height: auto;
+    /* .popup properties - image */
+    --popup-img-area-width: 800px;
+    --popup-img-area-height: 1062.5px;
+    --popup-img-inner-padding: 0px;
+    --popup-primary-img-width: 350px;
+    --popup-img-primary-secondary-gap: 0px 32px;
+    --popup-secondary-img-max-height: 152.3px;
+    --popup-secondary-img-slides-height: 1062.5px;
+    /* .imm-sch-url-container properties */
+    --imm-sch-url-size: 12px;
+    --imm-sch-url-display: block;
+    --logo-padding: 0px; }
+  .main-txt, .imm-sch-url-container {
+    position: absolute;
+    left: 610.84px;
+    width: 406px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box; }
+  .main-txt {
+    height: 100vh; }
+  .matrix {
+    height: 100vh; }
+  .overlay {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .matrix-popup {
+    max-height: 1214px;
+    position: static;
+    margin-bottom: 0;
+    border-width: 6px 0px 6px 0px;
+    margin-left: 197px;
+    padding: 32px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    display: block; }
+  .popup-txt-area {
+    position: absolute;
+    left: calc(610px + 32px);
+    top: 410px; }
+  .secondary-img-slides {
+    position: absolute;
+    left: 569px;
+    top: 0; }
+  .popup-img-area {
+    position: absolute;
+    left: calc(610px + 32px);
+    display: block; }
+  .pattern {
+    width: 203px;
+    height: calc(100% - 64px);
+    position: absolute;
+    background-position: center;
+    background-size: 1100px; }
+  #pattern-1 {
+    left: 0; }
+  #pattern-2 {
+    right: 0; }
+  .imm-sch-url-container {
+    bottom: 500px;
+    padding: 32px; } }
