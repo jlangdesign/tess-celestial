@@ -1175,7 +1175,7 @@ img {
         -ms-flex-align: center;
             align-items: center; }
   .matrix-popup {
-    max-height: 1214px;
+    height: 80vh;
     position: static;
     margin-bottom: 0;
     border-width: 6px 0px 6px 0px;
@@ -1201,7 +1201,7 @@ img {
     height: calc(100% - 64px);
     position: absolute;
     background-position: center;
-    background-size: 1100px; }
+    background-size: 1200px; }
   #pattern-1 {
     left: 0; }
   #pattern-2 {
